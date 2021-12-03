@@ -10,9 +10,12 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
+import Footer from "./footer"
 import "./layout.css"
+import "tailwindcss/tailwind.css"
 
 import bgImage from "../images/background-image-homepage.png"
+import footerImage from "../images/footer-image.png"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -30,16 +33,11 @@ const Layout = ({ children }) => {
       <div style={{ backgroundImage: `url(${bgImage})`, height: `780px` }}>
       <Header />
         {children}
-        <footer
-          style={{
-            marginTop: `2rem`,
-          }}
-        >
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
+        <div className="pl-16 pt-36">
+          <img src={footerImage}/>
+        </div>
       </div>
+      <Footer/>
     </>
   )
 }
