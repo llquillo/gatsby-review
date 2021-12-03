@@ -5,27 +5,28 @@ import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
-const IndexPage = () => (
-  <Layout>
-    <Seo title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <StaticImage
-      src="../images/gatsby-astronaut.png"
-      width={300}
-      quality={95}
-      formats={["auto", "webp", "avif"]}
-      alt="A Gatsby astronaut"
-      style={{ marginBottom: `1.45rem` }}
-    />
-    <p>
-      <Link to="/page-2/">Go to page 2</Link> <br />
-      <Link to="/using-typescript/">Go to "Using TypeScript"</Link> <br />
-      <Link to="/using-ssr">Go to "Using SSR"</Link> <br />
-      <Link to="/using-dsg">Go to "Using DSG"</Link>
-    </p>
-  </Layout>
-)
+import bgImage from "../images/background-image-homepage.png"
+<style>
+  .main{
 
-export default IndexPage
+  }    
+</style>
+class Index extends React.Component{
+  render(){
+    return(
+      <Layout>
+        <Seo title="Zbooni" />
+        <div className="homepage-text-container">
+          <h1 className="homepage-title">Say Hello</h1>
+          <h1 className="homepage-title">to cCommerce. </h1>
+          <p className="homepage-text"> 
+            The next generation platform for modern business. Drive more
+            sales with a personalized commerce experience. 
+          </p>
+        </div>
+    </Layout>
+    )
+  }
+}
+
+export default Index

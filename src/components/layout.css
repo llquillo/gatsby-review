@@ -1,4 +1,6 @@
-html {
+@tailwind base;
+
+/* html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   font: 112.5%/1.45em georgia, serif, sans-serif;
@@ -594,4 +596,58 @@ pre tt:after {
   html {
     font-size: 100%;
   }
+} */
+
+.main-background{
+  background-image: "../images/background-image-homepage.png";
+}
+
+.header-links-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-link{
+  justify-content: right;
+  color: white;
+  padding: 15px;
+}
+
+.zbooni-logo{
+  padding: 15px;
+
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.get-zbooni-button{
+  justify-content: right;
+  padding: 7px 16px 7px 16px;
+  color: white;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 35px;
+}
+
+.homepage-text-container{
+  padding: 10% 0 0 15%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.homepage-title{
+  font-weight: 900;
+  font-size: 65px;
+  line-height: 70px;
+  color: white;
+}
+
+.homepage-text{
+  padding-top: 1%;
+  width: 35%;
+  font-weight: 700;
+  color: white;
 }
