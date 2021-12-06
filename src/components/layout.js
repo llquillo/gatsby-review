@@ -11,6 +11,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import Footer from "./footer"
+import BusinessPage from "./business-just-got-presonal"
 import "./layout.css"
 import "tailwindcss/tailwind.css"
 
@@ -30,13 +31,14 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <div style={{ backgroundImage: `url(${bgImage})`, height: `780px` }}>
+      <div style={{ backgroundImage: `url(${bgImage})`, height: `780px`, width: `100%` }}>
       <Header />
         {children}
         <div className="pl-16 pt-36">
           <img src={footerImage}/>
         </div>
       </div>
+      <BusinessPage/>
       <Footer/>
     </>
   )

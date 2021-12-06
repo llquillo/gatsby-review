@@ -39,18 +39,27 @@ class Header extends React.Component{
   //   isMobileMenu = false
   // }
 
+  state ={className:"px-20 flex-row justify-between header-base"};
+  
+  componentDidMount(){
+    window.addEventListener("scroll", this.handleScroll);
+  }
+  
+  handleScroll=()=>{
+    if (window.pageYOffset > 0) {
+        this.setState({ className: "px-20 flex-row justify-between header-scroll" });   
+        
+    }else{
+        this.setState({ className: "px-20 flex-row justify-between header-base" });
+        
+    }
+  }
+
   render(){
     // const { isMobileMenu } = this.state
     return(
         <header
-        className="px-20 flex-row justify-between"
-        style={{
-          display: `flex`,
-          flexDirection: `row`,
-          height: `90px`,
-          background: `transparent`,
-          marginBottom: `1.45rem`,
-        }}
+        className={this.state.className}
       >
         <div
           className="flex-row justify-center align-center zbooni-logo"
